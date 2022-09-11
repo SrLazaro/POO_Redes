@@ -25,7 +25,7 @@ public class Main {
 
     public static void criar_computadores() {
 
-        computador1 = new Computador("Matheus Corno", IP_COMPUTADOR_1, "H1");
+        computador1 = new Computador("Matheus Corno Manso", IP_COMPUTADOR_1, "H1");
         computador2 = new Computador("Adamor Comedor de Casada",IP_COMPUTADOR_2, "H2");
 
     }
