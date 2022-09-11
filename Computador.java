@@ -85,7 +85,7 @@ public class Computador implements Host{
     }
 
     @Override
-    public boolean verificarEnderecoMAC(String enderecoMAC){
+    public boolean verificarEnderecoMAC(String enderecoMAC, Host host){
 
         boolean souEu = false;
 
