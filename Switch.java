@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 public class Switch implements Conexao, ProtocoloARPImplementacao {
 
     private ArrayList<PortaSwitch> portas = new ArrayList();
-    private ArrayList<RegistroMAC> tabelaMAC = new ArrayList();
+    private Set<RegistroMAC> tabelaMAC = new HashSet<>();
 
 
     public Switch(ArrayList<PortaSwitch> portas) {
@@ -109,18 +112,24 @@ public class Switch implements Conexao, ProtocoloARPImplementacao {
         this.portas = portas;
     }
 
-    /**
-     * @return ArrayList<RegistroMAC> return the tabelaMAC
-     */
-    public ArrayList<RegistroMAC> getTabelaMAC() {
+    public Set<RegistroMAC> getTabelaMAC() {
         return tabelaMAC;
     }
 
-    /**
-     * @param tabelaMAC the tabelaMAC to set
-     */
-    public void setTabelaMAC(ArrayList<RegistroMAC> tabelaMAC) {
+    public void setTabelaMAC(Set<RegistroMAC> tabelaMAC) {
         this.tabelaMAC = tabelaMAC;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Switch)) return false;
+        Switch aSwitch = (Switch) o;
+        return getPortas().equals(aSwitch.getPortas()) && getTabelaMAC().equals(aSwitch.getTabelaMAC());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getPortas(), getTabelaMAC());
+    }
 }
