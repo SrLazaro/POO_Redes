@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class RegistroARP {
     
     private String enderecoMAC;
@@ -6,6 +8,19 @@ public class RegistroARP {
     public RegistroARP(String enderecoMAC, String ip) {
         this.enderecoMAC = enderecoMAC;
         this.ip = ip;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof RegistroARP)) return false;
+        RegistroARP that = (RegistroARP) o;
+        return getEnderecoMAC().equals(that.getEnderecoMAC()) && getIp().equals(that.getIp());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getEnderecoMAC(), getIp());
     }
 
     /**

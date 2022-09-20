@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Computador implements Host{
     
@@ -40,7 +42,7 @@ public class Computador implements Host{
 
         String enderecoMACDestino = null;
 
-        enderecoMACDestino = resgatarPorTabelaMac(ipDestino);
+        enderecoMACDestino = resgatarPorTabelaArp(ipDestino);
         if (enderecoMACDestino == null){
             enderecoMACDestino = resgatarPorConexao(ipDestino);
         }
@@ -49,13 +51,13 @@ public class Computador implements Host{
 
     }
 
-    public String resgatarPorTabelaMac(String ipDestino){
+    public String resgatarPorTabelaArp(String ipDestino){
 
         String enderecoMACDestino = null;
 
-        System.out.println("Buscando Endereço MAC de Destino por Tabela MAC...");
+        System.out.println("Buscando Endereço MAC de Destino por Tabela Arp...");
 
-        ArrayList<RegistroARP> tabelaARP = new ArrayList();
+        Set<RegistroARP> tabelaARP = new HashSet<>();
 
         tabelaARP = this.protocolo.getTabelaARP();
 
@@ -80,7 +82,7 @@ public class Computador implements Host{
 
         this.conexao.receberPacote(pacote_envio);
         
-        return this.resgatarPorTabelaMac(ipDestino); 
+        return this.resgatarPorTabelaArp(ipDestino);
 
     }
 

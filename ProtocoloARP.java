@@ -1,23 +1,17 @@
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ProtocoloARP {
 
     public static String broadcastMAC = "ff:ff:ff:ff:ff:ff";
     public static String payloadSucesso = "Pacote recebido com Sucesso";
-    private ArrayList<RegistroARP> tabelaARP = new ArrayList();
+    private Set<RegistroARP> tabelaARP = new HashSet();
 
-    /**
-     * @return ArrayList<RegistroARP> return the tabelaARP
-     */
-    public ArrayList<RegistroARP> getTabelaARP() {
+    public Set<RegistroARP> getTabelaARP() {
         return tabelaARP;
     }
 
-    /**
-     * @param tabelaARP the tabelaARP to set
-     */
-    public void setTabelaARP(ArrayList<RegistroARP> tabelaARP) {
+    public void setTabelaARP(Set<RegistroARP> tabelaARP) {
         this.tabelaARP = tabelaARP;
     }
-
 }
