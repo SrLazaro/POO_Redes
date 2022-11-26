@@ -1,0 +1,21 @@
+
+f	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïøÙ¥
+k	java:S117r"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÑ‚ùûÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+~
+java:S1845•"bRename method "getEnderecoMAC" to prevent any misunderstanding/clash with method "getEnderecoMac".(àÚ‡šıÿÿÿÿ
+~
+java:S1845œ"bRename method "setEnderecoMAC" to prevent any misunderstanding/clash with method "setEnderecoMac".(ÙÎìñıÿÿÿÿ
+{
+java:S4144•"_Update this method so that its implementation is not identical to "getEnderecoMac" on line 130.(àÚ‡šıÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù’è
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ŒãÊÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÕÖš¬ıÿÿÿÿ
+M	java:S106)"9Replace this use of System.out or System.err by a logger.(¦Š²;
+S
+java:S1854<"=Remove this useless assignment to local variable "tabelaARP".(îÅäÕ
+N	java:S106:"9Replace this use of System.out or System.err by a logger.(¥ÚÕØ
+S	java:S106O"9Replace this use of System.out or System.err by a logger.(„Š‹•şÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ

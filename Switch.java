@@ -55,6 +55,7 @@ public class Switch implements Conexao, ProtocoloARPImplementacao {
 
         gravarNaTabelaMac(pacote);
 
+
         if(pacote.getenderecoMACDestino().equals(ProtocoloARP.broadcastMAC)){
             broadcast(pacote);
         }else{

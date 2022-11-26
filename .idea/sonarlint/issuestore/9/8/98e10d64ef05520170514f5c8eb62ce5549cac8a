@@ -1,0 +1,13 @@
+
+D
+java:S3740"/Provide the parametrized type for this generic.(¸ªÑ
+s
+java:S1104"XMake broadcastMAC a static final constant or non-public and provide accessors if needed.(éÇ›Ëúÿÿÿÿ
+u
+java:S1104"ZMake payloadSucesso a static final constant or non-public and provide accessors if needed.(Ä•Üúÿÿÿÿ
+M
+java:S1444"2Make this "public static broadcastMAC" field final(éÇ›Ëúÿÿÿÿ
+O
+java:S1444"4Make this "public static payloadSucesso" field final(Ä•Üúÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
